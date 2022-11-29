@@ -1,4 +1,15 @@
-# 資料庫系統分析(RDBMS)
+# 資料庫系統分析
+# RDBMS vs NOSQL
+### 組成
+RDBMS 由資料表組成 需要事先定義好Schema
+
+NOSQL 由collection組成 collection中的document 格式不需要一致
+### 什麼時候要用 RDBMS? 什麼時候要用 NOSQL?
+當資料需要確保一致性時 較適合使用RDBMS 如銀行的錢轉入轉出 需要同時對兩邊進行操作 或是同時取消 不然會有錢憑空消失
+
+而在整個schema還不確定 或會需要做到頻繁更新時，較適合使用NOSQL
+### 選擇
+而我最後選擇的是使用RDBMS，由於我們的Schema確定好後就較不會更改，而且資料大多具有一致性，因此最後還是選用RDBMS
 ## Mysql
 ![](https://i.imgur.com/i4M7hOC.png)
 * 相容於各式各樣的引擎和介面，這也是市場上最成熟的資料庫之一
@@ -6,6 +17,10 @@
 * 由於是最流行的資料庫工具之一，很容易在網路上找到支援的資訊
 * 但安全機制相較於其他資料庫較為薄弱
 * 與PHP配合度最高
+* Mysql 商用版會額外提供客戶技術支援服務與許多的工具
+* Mysql 免費版並沒有容量限制 而速度則是在有超過128個資料庫連線以上時才會有影響
+ ![](https://i.imgur.com/c819D6V.png)
+
 
     -- 適合小型專案 如網頁應用程式或是網站
 ## Oracle
@@ -51,3 +66,5 @@ https://zh.wikipedia.org/zh-tw/ACID
 https://shininglionking.blogspot.com/2018/04/rdbms-vs-nosql.html
 
 https://zh.wikipedia.org/zh-tw/CAP%E5%AE%9A%E7%90%86
+
+https://fredwang.blogspot.com/2021/05/mysql-community-mysql.html
